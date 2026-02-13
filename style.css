@@ -226,13 +226,32 @@ input {
   box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
 }
 
+.letterBox {
+  animation: fadeInLetter 1s ease forwards;
+}
+
+@keyframes fadeInLetter {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* ========================================
    ===== FINAL PAGE SCROLL =====
 ======================================== */
-#page10 {
-  max-height: 85vh;
+
+.container {
+  max-height: 90vh;
   overflow-y: auto;
+  padding-right: 6px;
 }
+
 
 /* ========================================
    ===== GIFT SECTION =====
