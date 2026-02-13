@@ -1,15 +1,11 @@
-/* ========================================
-   ===== GLOBAL RESET =====
-======================================== */
+/* Basic reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ========================================
-   ===== BODY BACKGROUND =====
-======================================== */
+/* Page background */
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
@@ -19,9 +15,7 @@ body {
   background: url("heart-bg.jpg") center/cover no-repeat;
 }
 
-/* ========================================
-   ===== OVERLAY =====
-======================================== */
+/* Soft white overlay */
 .overlay {
   position: fixed;
   inset: 0;
@@ -29,9 +23,7 @@ body {
   pointer-events: none;
 }
 
-/* ========================================
-   ===== MAIN CONTAINER =====
-======================================== */
+/* Main wrapper */
 .container {
   position: relative;
   width: 90%;
@@ -39,9 +31,7 @@ body {
   z-index: 2;
 }
 
-/* ========================================
-   ===== PAGE CARD =====
-======================================== */
+/* Page card layout */
 .page {
   position: relative;
   display: none;
@@ -67,17 +57,14 @@ body {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+/* Active page */
 .page.active {
   display: block;
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
-/* ========================================
-   ===== PAGE DECORATIONS =====
-======================================== */
-
-/* Corner heart */
+/* Decorative corner heart */
 .page::before {
   content: "❤";
   position: absolute;
@@ -88,7 +75,7 @@ body {
   pointer-events: none;
 }
 
-/* Gradient border */
+/* Gradient border effect */
 .page::after {
   content: "";
   position: absolute;
@@ -104,24 +91,20 @@ body {
   pointer-events: none;
 }
 
-/* Keep content above border */
+/* Keep content above decorations */
 .page > * {
   position: relative;
   z-index: 2;
 }
 
-/* ========================================
-   ===== HEADINGS =====
-======================================== */
+/* Titles */
 h1, h2 {
   font-family: 'Great Vibes', cursive;
   color: #a00000;
   margin-bottom: 20px;
 }
 
-/* ========================================
-   ===== PARAGRAPHS =====
-======================================== */
+/* Text content */
 .page p {
   max-width: 520px;
   margin: 0 auto 22px;
@@ -130,7 +113,7 @@ h1, h2 {
   color: #444;
 }
 
-/* Divider flowers (not last paragraph) */
+/* Flower divider */
 .page p:not(:last-of-type)::after {
   content: "❀ ❀ ❀";
   display: block;
@@ -140,9 +123,7 @@ h1, h2 {
   opacity: 0.35;
 }
 
-/* ========================================
-   ===== BUTTONS =====
-======================================== */
+/* Buttons */
 button {
   padding: 12px 30px;
   border: none;
@@ -158,9 +139,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* ========================================
-   ===== INPUT =====
-======================================== */
+/* Inputs */
 input {
   padding: 10px;
   width: 80%;
@@ -169,9 +148,7 @@ input {
   margin-bottom: 10px;
 }
 
-/* ========================================
-   ===== ENVELOPE =====
-======================================== */
+/* Envelope animation */
 .envelope {
   width: 220px;
   cursor: pointer;
@@ -194,9 +171,7 @@ input {
   100% { transform: scale(1) rotate(0); }
 }
 
-/* ========================================
-   ===== VALENTINE BUTTON AREA =====
-======================================== */
+/* Valentine buttons */
 .valentineContainer {
   display: flex;
   justify-content: center;
@@ -214,9 +189,7 @@ input {
   transition: transform 0.2s ease;
 }
 
-/* ========================================
-   ===== LETTER BOX =====
-======================================== */
+/* Letter box */
 .letterBox {
   background: #fffaf0;
   padding: 25px;
@@ -224,9 +197,6 @@ input {
   text-align: left;
   line-height: 1.8;
   box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
-}
-
-.letterBox {
   animation: fadeInLetter 1s ease forwards;
 }
 
@@ -241,21 +211,14 @@ input {
   }
 }
 
-
-/* ========================================
-   ===== FINAL PAGE SCROLL =====
-======================================== */
-
+/* Scroll container */
 .container {
   max-height: 90vh;
   overflow-y: auto;
   padding-right: 6px;
 }
 
-
-/* ========================================
-   ===== GIFT SECTION =====
-======================================== */
+/* Gift section */
 .giftBox {
   display: flex;
   flex-direction: column;
@@ -268,9 +231,7 @@ input {
   border-radius: 12px;
 }
 
-/* ========================================
-   ===== FLOATING HEARTS =====
-======================================== */
+/* Floating hearts */
 .heartOverlay {
   position: fixed;
   inset: 0;
@@ -292,9 +253,7 @@ input {
   to { transform: translateY(-110vh); opacity: 0; }
 }
 
-/* ========================================
-   ===== MASONRY PHOTOS =====
-======================================== */
+/* Photo masonry */
 #page8 {
   max-height: 85vh;
   overflow-y: auto;
@@ -332,16 +291,14 @@ input {
   transform: scale(1.04);
 }
 
-/* Mobile */
+/* Mobile layout */
 @media (max-width: 600px) {
   .masonry {
     column-count: 1;
   }
 }
 
-/* ========================================
-   ===== VIDEO =====
-======================================== */
+/* Video section */
 .videoWrapper {
   margin-bottom: 25px;
 }
